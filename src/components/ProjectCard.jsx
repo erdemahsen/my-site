@@ -10,10 +10,10 @@ export default function ProjectCard({ project }) {
   return (
     <motion.div 
       className="card"
-      initial={{ y: 20, opacity: 0 }}
-      animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.2 }}
-      whileHover={{ y: -3}}
+      initial={{  opacity: 0 }}
+      animate={{  opacity: 1 }}
+      transition={{ duration: 0.1 }}
+      whileHover={{ y: -5}}
     >
       {image && <img src={image} alt={title} />}
       <h2>{title}</h2>
