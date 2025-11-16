@@ -19,7 +19,7 @@ export const projectsData = [
     title: "NotBeen App",
     description: "A React Native clone of the 'Been' app for tracking travel locations.",
     links: {
-      github: "https://github.com/erdemahsen/notbeen-app", 
+      github: "https://github.com/erdemahsen/notBeen", 
     }
   }
 ];

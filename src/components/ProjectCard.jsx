@@ -4,25 +4,21 @@ import { SiGoogleplay } from "react-icons/si";
 import { SiAppstore } from "react-icons/si";
 import { TbWorld } from "react-icons/tb";
 
-// 1. Receive 'project' as a prop
 export default function ProjectCard({ project }) {
-  // 2. Destructure the data from the prop for easier use
   const { image, title, description, links } = project;
 
   return (
-    // I've wrapped this in motion.div for you
     <motion.div 
       className="card"
       initial={{ y: 20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
-      transition={{ duration: 0.5 }}
+      transition={{ duration: 0.2 }}
+      whileHover={{ y: -3}}
     >
-      {/* 3. Use the data from props */}
       {image && <img src={image} alt={title} />}
       <h2>{title}</h2>
       <p>{description}</p>
       
-      {/* 4. Conditionally render links */}
       <div className="card-links">
         {links.website && (
         <a href={links.website} target="_blank" rel="noopener noreferrer">
