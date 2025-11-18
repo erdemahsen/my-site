@@ -1,5 +1,6 @@
 import React from 'react';
 import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { motion } from "motion/react"
 
 const LINKEDIN_URL = 'https://www.linkedin.com/in/erdemahsenomer/';
 const GITHUB_URL = 'https://github.com/erdemahsen';
@@ -9,7 +10,11 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer> 
+    <motion.footer
+        initial={{  opacity: 0 }}
+        animate={{  opacity: 1 }}
+        transition={{ duration: 0.8, ease: "easeIn" }}
+    > 
       <div className='footer-links'>
         <a 
           href={LINKEDIN_URL} 
@@ -37,6 +42,6 @@ export default function Footer() {
       <p>
         &copy; {currentYear} Ömer Erdem Ahsen Website. All rights reserved.
       </p>
-    </footer>
+    </motion.footer>
   );
 }
