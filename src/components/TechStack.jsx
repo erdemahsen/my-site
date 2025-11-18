@@ -25,13 +25,14 @@ export default function TechStack() {
       <h2>Tech Stack</h2>
         <div className="techstack-list">
             {tech.map((t) => (
-            <div
+            <motion.div
                 key={t.name}
                 className="techstack-item"
+                whileHover={{ y: 0, scale:1.03}}
             >
                 <div >{t.icon}</div>
                 <p >{t.name}</p>
-            </div>
+            </motion.div>
             ))}
         </div>
     </motion.div>
